@@ -1,15 +1,15 @@
 {
   "name": "jscalc",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple JS calc",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Lyovson",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.1"
   }
