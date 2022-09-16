@@ -1,0 +1,90 @@
+:root {
+  --screen-color: RGB(93, 92, 90);
+  --dark-grey: RGB(108, 107, 105);
+  --dark-grey-hover: RGB(108, 107, 105, 0.8);
+  --light-grey: RGB(131, 131, 129);
+  --orange: RGB(241, 162, 61);
+  --orange-hover: RGB(241, 162, 61, 0.8);
+  --text-color: RGB(250, 250, 250);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.calculator {
+  display: grid;
+  gap: 1px;
+  background-color: #212121;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  background-color: var(--light-grey);
+  transition: .2s;
+}
+
+.calculator > button:hover {
+  background-color: var(--dark-grey);
+}
+
+.calculator > button.dark {
+  background-color: var(--dark-grey);
+}
+
+.calculator > button.dark:hover {
+  background-color: var(--dark-grey-hover);
+}
+
+.calculator > button.orange {
+  background-color: var(--orange);
+}
+
+.calculator > button.orange:hover {
+  background-color: var(--orange-hover);
+}
+
+.big-button{
+  grid-column: span 2;
+}
+
+.screen {
+  grid-column: 1 / -1;
+  background-color: var(--screen-color);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  
+}
+
+.screen .operand-1 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.screen .operand-2 {
+  color: var(--text-color);
+  font-size: 3rem;
+}
